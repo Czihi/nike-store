@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f952a3e7-0f70-43b1-b696-22d3cbcb1e23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Links.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MiniPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/blackDot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/greyDot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/leftPanelShoe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/leftShoe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/nikeShoes1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/nikeShoes2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/nikeShoes3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +28,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -72,8 +95,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595939481646</updated>
-      <workItem from="1595939485406" duration="2590000" />
+      <workItem from="1595939485406" duration="24655000" />
     </task>
+    <task id="LOCAL-00001" summary="Creating nike store app">
+      <created>1595942321060</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595942321060</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,5 +120,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Creating nike store app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating nike store app" />
   </component>
 </project>
