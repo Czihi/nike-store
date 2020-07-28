@@ -2,11 +2,13 @@ import React from "react";
 import nikeShoes1 from "../images/nikeShoes1.png"
 import nikeShoes2 from "../images/nikeShoes2.png"
 import nikeShoes3 from "../images/nikeShoes3.png"
-const MainImage=(props)=>{
-    const shoes={"nikeShoes1": nikeShoes1, "nikeShoes2": nikeShoes2, "nikeShoes3": nikeShoes3};
+const MainImage=()=>{
+    const shoes={1: nikeShoes1, 2: nikeShoes2, 3: nikeShoes3};
     return(
-        <div className="mainImage">
-            <img src={shoes[props.source]} alt="shoe"/>
+        <div>
+            <img id="image1" className="mainImage img1 noSelect" src={shoes[1]} alt="shoe"/>
+            <img id="image2" className="mainImage img2 noSelect" src={shoes[2]} alt="shoe"/>
+            <img id="image3" className="mainImage img3 noSelect" src={shoes[3]} alt="shoe"/>
         </div>
     )
 };

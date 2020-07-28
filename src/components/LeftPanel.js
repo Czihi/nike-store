@@ -5,12 +5,12 @@ import Sidebar from "./Sidebar";
 const LeftPanel = (props) => {
     return(
         <div className="leftPanel">
-            <img className="nikeLogo" src={nikeLogo} alt="logo"/>
+            <img className="nikeLogo noSelect" src={nikeLogo} alt="logo"/>
             <h3 className="header">Store</h3>
             <Sidebar
             mark={props.mark}
             />
-            <img className="leftPanelShoe" src={leftPanelShoe} alt="logo"/>
+            <img className="leftPanelShoe noSelect" src={leftPanelShoe} alt="logo"/>
         </div>
     )
 };

@@ -16,7 +16,9 @@ import background from "./images/background.png"
 class App extends Component {
     state = {
         dotColor: ["blackDot", "greyDot", "greyDot", "greyDot", "greyDot"],
-        shoes: "nikeShoes3"
+        imageIndex: 1,
+        canGoLeft: false,
+        canGoRight: true
     };
 
     mark = (index) => {
@@ -42,10 +44,66 @@ class App extends Component {
         this.setState({dotColor: elements});
     };
 
+    leftImage =()=>{
+        if(this.state.imageIndex===2){
+            document.getElementById("left").style.cursor="auto";
+            document.getElementById("right").style.cursor="pointer";
+            this.setState({canGoRight: true, canGoLeft: false});
+
+        }else{
+            if (this.state.imageIndex===3){
+                document.getElementById("right").style.cursor="pointer";
+                document.getElementById("left").style.cursor="pointer";
+
+                this.setState({canGoRight: true, canGoLeft: true})
+            }
+        }
+        if(this.state.imageIndex>1){
+            for(let i=1; i<4; i++){
+                if(i===this.state.imageIndex-1){
+                    document.getElementById("image"+i).style.opacity=1;
+
+
+                }else{
+                    document.getElementById("image"+i).style.opacity=0;
+
+                }
+            }
+            this.setState({imageIndex: this.state.imageIndex-1})
+        }
+    };
+    rightImage =()=>{
+        if(this.state.imageIndex===2){
+            document.getElementById("right").style.cursor="auto";
+            document.getElementById("left").style.cursor="pointer";
+
+            this.setState({canGoLeft: true, canGoRight: false})
+        }else{
+            if (this.state.imageIndex===1){
+                document.getElementById("right").style.cursor="pointer";
+                document.getElementById("left").style.cursor="pointer";
+                this.setState({canGoRight: true, canGoLeft: true});
+
+            }
+        }
+        if(this.state.imageIndex<3){
+            for(let i=1; i<4; i++){
+                if(i===this.state.imageIndex+1){
+                    document.getElementById("image"+i).style.opacity=1;
+
+                }else{
+                    document.getElementById("image"+i).style.opacity=0;
+
+
+                }
+            }
+            this.setState({imageIndex: this.state.imageIndex+1})
+        }
+    };
     render() {
         return (
             <Router>
-                <img className="background" src={background} alt="bg"/>
+                <img className="background noSelect" src={background} alt="bg"/>
                 <Route path="/Nike-store" exact render={
                     () => {
                         document.title="Nike store"
@@ -59,9 +117,12 @@ class App extends Component {
                                         dotColor={this.state.dotColor}
                                     />
                                     <MainImage
-                                        source={this.state.shoes}
                                     />
                                     <Info
+                                        goLeft={this.leftImage}
+                                        goRight={this.rightImage}
+                                        canGoLeft={this.state.canGoLeft}
+                                        canGoRight={this.state.canGoRight}
                                     />
                                     <Links/>
 

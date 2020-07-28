@@ -1,7 +1,9 @@
 import React from "react";
 import arrow from "../images/arrow.png"
 import cart from "../images/cart.png"
-const Info = ()=>{
+import arrowGray from "../images/arrowGray.png"
+const Info = (props)=>{
+    const arrowType={true: arrow, false: arrowGray};
     return(
         <div className="info">
             <div className="groupCart">
@@ -14,8 +16,8 @@ const Info = ()=>{
             <h6 className="desc">From high-top to low-top. Live the legend of the Air Force 1, modernized for ultimate street style.</h6>
             <br/>
             <button className="addToCart">Add to cart</button>
-            <img className="arrowLeft" src={arrow} alt="left"/>
-            <img className="arrowRight" src={arrow} alt="right"/>
+            <img id="left" className="arrowLeft noSelect" src={arrowType[props.canGoLeft]} onClick={props.goLeft} alt="left"/>
+            <img id="right" className="arrowRight noSelect" src={arrowType[props.canGoRight]} onClick={props.goRight} alt="right"/>
         </div>
     )
 };
