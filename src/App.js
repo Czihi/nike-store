@@ -48,6 +48,7 @@ class App extends Component {
                 <img className="background" src={background} alt="bg"/>
                 <Route path="/Nike-store" exact render={
                     () => {
+                        document.title="Nike store"
                         return (<div>
                                 <div className="group">
                                     <LeftPanel

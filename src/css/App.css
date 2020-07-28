@@ -50,7 +50,7 @@
 .miniPanel {
   margin-top: 22%;
   position: relative;
-  left:10%
+  left:15%
 }
 .dot{
   max-width: 7px;
@@ -61,7 +61,7 @@
   transform: rotate(-40deg);
   position: relative;
   z-index: -1;
-  right: 3%;
+  left: 2%;
 }
 .info{
   margin-top: 2%;
