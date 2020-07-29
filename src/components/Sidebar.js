@@ -6,7 +6,6 @@ const Sidebar = (props) => {
 window.onload= function (){
     document.getElementById("men").style.color="#a6a6a2";
     document.getElementById("men").style.cursor="auto";
-    document.getElementById("first").style.cursor="auto";
 };
 
     return(<div className="sideNav">

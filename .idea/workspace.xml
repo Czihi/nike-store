@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f952a3e7-0f70-43b1-b696-22d3cbcb1e23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/arrowGray.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LeftPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Links.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Links.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MiniPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MiniPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,6 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1fMDrC2QPx7nq94aZ9yrdAVsxfd" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -87,7 +87,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595939481646</updated>
-      <workItem from="1595939485406" duration="39114000" />
+      <workItem from="1595939485406" duration="45523000" />
+      <workItem from="1596019306145" duration="3471000" />
     </task>
     <task id="LOCAL-00001" summary="Creating nike store app">
       <created>1595942321060</created>
@@ -110,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595965409350</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added animations">
+      <created>1595980461503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595980461503</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +129,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -132,6 +142,7 @@
     <MESSAGE value="Creating nike store app" />
     <MESSAGE value="Made website based on project design" />
     <MESSAGE value="Added title, favicon + some positioning changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added title, favicon + some positioning changes" />
+    <MESSAGE value="Added animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added animations" />
   </component>
 </project>

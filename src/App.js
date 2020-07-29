@@ -18,28 +18,35 @@ class App extends Component {
         dotColor: ["blackDot", "greyDot", "greyDot", "greyDot", "greyDot"],
         imageIndex: 1,
         canGoLeft: false,
-        canGoRight: true
+        canGoRight: true,
+        size: 1920
     };
 
     mark = (index) => {
         const options = document.getElementsByClassName("sideNavOption");
         const dots = document.getElementsByClassName("dot");
-        for (let i = 0; i < 5; i++) {
-            options[i].style.color = "black";
-            options[i].style.cursor = "pointer";
-            dots[i].style.cursor = "pointer"
-        }
-        options[index].style.color = "#a6a6a2";
-        options[index].style.cursor = "auto";
-        dots[index].style.cursor = "auto";
-
-        let elements = [];
-        for (let i = 0; i < 5; i++) {
-            if (i !== index) {
-                elements.push("greyDot")
-            } else {
-                elements.push("blackDot")
+        let elements=[];
+        if(dots.length>4) {
+            for (let i = 0; i < 5; i++) {
+                dots[i].style.cursor = "pointer"
             }
+            dots[index].style.cursor = "auto";
+
+            for (let i = 0; i < 5; i++) {
+                if (i !== index) {
+                    elements.push("greyDot")
+                } else {
+                    elements.push("blackDot")
+                }
+            }
+        }
+        if(options.length>4){
+            for (let i = 0; i < 5; i++) {
+                options[i].style.color = "black";
+                options[i].style.cursor = "pointer";
+            }
+            options[index].style.color = "#a6a6a2";
+            options[index].style.cursor = "auto";
         }
         this.setState({dotColor: elements});
     };
@@ -62,10 +69,12 @@ class App extends Component {
             for(let i=1; i<4; i++){
                 if(i===this.state.imageIndex-1){
                     document.getElementById("image"+i).style.opacity=1;
+                    document.getElementById("grad"+i).style.opacity=1;
 
 
                 }else{
                     document.getElementById("image"+i).style.opacity=0;
+                    document.getElementById("grad"+i).style.opacity=0;
 
                 }
             }
@@ -90,10 +99,11 @@ class App extends Component {
             for(let i=1; i<4; i++){
                 if(i===this.state.imageIndex+1){
                     document.getElementById("image"+i).style.opacity=1;
+                    document.getElementById("grad"+i).style.opacity=1;
 
                 }else{
                     document.getElementById("image"+i).style.opacity=0;
-
+                    document.getElementById("grad"+i).style.opacity=0;
 
                 }
             }
