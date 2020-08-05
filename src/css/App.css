@@ -1,92 +1,117 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-
 .noDec{
   text-decoration: none!important;
   color: black;
 }
+.white-div{
+  flex: 1 1;
+  box-shadow: 0 0 10px white;
+}
+.gray-div{
+  background: #f0eeed;
+  flex: 1 1;
+  box-shadow: 0 0 10px #a0aaa9;
+}
 .background{
-    max-width: 100%;
-    position:fixed;
+  display: flex;
+  flex-wrap: wrap;
+    width: 100%;
+    height: 70vw;
+    position:absolute;
     z-index: -2;
 }
 .leftPanel{
-  max-width: 20%;
-}
-.nikeLogo{
-  margin-top: 5%;
-  margin-left: 25%;
-  width: calc(40% + 1vw + 1vh);
-  height: auto;
+  margin-left: 5%;
+  flex: 0.8 1;
+  z-index: 1;
 }
 .header{
-  margin-left: 25%;
-  margin-top: 25%;
-  font-size: calc(120% + 1vw + 1vh);
-  font-weight: 900;
-  margin-bottom: 15%;
+  margin-bottom: 18%;
+  font-size: calc(2vw + 2vh);
+  font-weight: 700;
+  text-shadow: 1px 1px 1px
 }
 
 .sideNavOption{
-  font-size: calc(10% + 1vw + 1vh);
-  margin-left: 25%;
-  font-weight: 800;
+  font-size: calc(1.2vw + 1.2vh);
+  font-weight: 700;
+  line-height: 1.5;
   cursor: pointer;
+  text-shadow: 1px 1px 1px
 }
 .sideNav{
-  margin-top: 20%;
 }
 .leftPanelShoe{
-  margin-top: 20%;
-  max-width:60%;
-  margin-left: 15%;
+  width: 70%;
   transform: scaleX(-1);
+  margin-top: 25%;
+  margin-left: -20%;
 }
 
+.group-info-links{
+  display:flex;
+  flex-wrap: wrap;
+}
+.left{
+  flex: 10 1;
+}
+.right{
+  flex: 0 1;
+}
 .group {
+  margin-top: 8%;
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
 }
-.groupCart {
-  display: flex;
-  align-content: center;
-  justify-content: flex-end;
-}
-.miniPanel {
-  z-index: 1;
-  margin-top: 22%;
-}
+
 .dot{
-  max-width: 7px;
-  max-height: 7px;
+  margin: 2% 0;
+  display: block;
   cursor: pointer;
 }
+.miniPanel {
+  margin-top: 13%;
+  flex: 1.2 1;
+  z-index:1
+}
 .mainImage{
+  position: absolute;
+  top:5%;
+  left: 13%;
+  width: 55%;
   height: auto;
   transform: rotate(-40deg);
-  z-index: -1;
+
 }
 .info {
-  margin-top: 2%;
+  margin-top: 2.5%;
+  flex: 1 1;
+}
+.groupCart {
+  width:100%;
+  height: auto;
+  margin-top: 3%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: flex-end;
 }
 .cart{
-  font-size: calc(30% + 1vw + 1vh);
-  font-weight: 900;
-  margin-right: 5%;
-  margin-top: 2%;
+  vertical-align: middle;
+  font-size: 34px;
+  font-weight: 800;
+  display: inline;
 }
 .cartIcon{
-  max-width: 50px;
-  max-height: 50px;
+  vertical-align: middle;
+  margin-left: 5%;
+  height: 50px;
+  width: auto;
   text-align: right;
 }
 .shoeName{
-  font-size: calc(80% + 2vw + 2vh);
-  position: absolute;
-  margin-top: 5%;
+  font-size: calc(2.8vw + 2.8vh);
   font-weight: 900;
+  line-height: 1;
   color: transparent;
   background-clip: text;
 }
@@ -99,50 +124,83 @@
 
   background-image: linear-gradient(to right, #00a, #00f 25%,  grey 85%);
   opacity:0;
+  display: none;
   transition: 1s;
 }
 .gradient3{
   background-image: linear-gradient(to right, #000, #bf0d0d 25%,  orange 85%);
   opacity:0;
+  display: none;
   transition: 1s;
 }
+
+.img1{
+  position: absolute;
+  opacity:1;
+  transition: 1s;
+  filter: drop-shadow(0 3vw 0.5vw rgba(0, 0, 0, 0.3));
+}
+.img2{
+  position: absolute;
+  transition: 1s;
+  opacity: 0;
+  filter: drop-shadow(0 3vw 0.5vw rgba(0, 0, 170, 0.3));
+}
+.img3{
+  transition: 1s;
+  opacity: 0;
+  filter: drop-shadow(0 3vw 0.5vw rgba(191, 13, 13, 0.3));
+}
+
 .price{
-  margin-top: 35%;
   font-weight: 900;
-  font-size: calc(90% + 1vw + 1vh);
+  line-height: 2;
+  font-size: calc(1.8vw + 1.8vh);
+  text-shadow: 1px 1px 1px;
 }
 .desc{
-  font-size: 16px;
-  line-height: 200%;
-  max-width: 80%;
+  width: 90%;
+  font-size: calc(0.65vw + 0.65vh);
+  line-height: 2;
+  text-shadow: 1px 1px 1px;
   color: dimgray;
 }
 .addToCart{
   background-color: black;
   color: white;
   text-align: center;
-  width: 80%;
-  height: 12%;
+  margin-top: 8%;
+  width: 90%;
+  height: 15%;
   font-size: calc(1vw + 1vh);
   font-weight: 900;
 }
+.group-buttons{
+  margin-top: 20%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
 .arrowLeft{
-  max-width: 200px;
-  max-height: 50%;
+  width: 50%;
+  height: auto;
+  flex: 1 1;
   transform: rotate(-180deg);
   cursor: pointer;
 }
 .arrowRight{
-  max-width: 200px;
-  max-height: 50%;
+  width: 50%;
+  height: auto;
+  flex: 1 1;
   cursor: pointer;
 }
 .linksMenu{
-  margin-top: 30%;
+  flex: 0.01 1;
+  margin-top: 200%;
 }
 .link{
-  font-size: calc(-10% + 1vw + 1vh);
-  margin-bottom: 80%;
+  font-size: calc(1vw + 1vh);
+  margin-top:100%;
   font-weight: 900;
   transform: rotate(-90deg);
 }
@@ -153,18 +211,37 @@
   -webkit-user-select: none;
 }
 
-.img1{
-  position: absolute;
-  opacity:1;
-  transition: 1s;
+.top-panel{
+  display: flex;
+  justify-content: space-between;
 }
-.img2{
-  position: absolute;
-  transition: 1s;
-  opacity: 0;
-}
-.img3{
-  transition: 1s;
-  opacity: 0;
+.nikeLogo{
+  margin-left: 5%;
+  width: 12%;
+  height: auto;
 }
 
+
+@media (max-width: 600px){
+  .linksMenu{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .link{
+    transform: none;
+    margin-top: 0%;
+    flex: 1 1;
+  }
+  .miniPanel{
+    display: none;
+  }
+  .leftPanel{
+    display: none;
+  }
+  .background{
+    display: none;
+  }
+  .group-info-links{
+    display: block;
+  }
+}

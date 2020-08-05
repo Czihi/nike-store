@@ -2,19 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f952a3e7-0f70-43b1-b696-22d3cbcb1e23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/TopPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Links.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Links.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MiniPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MiniPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/blackDot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/blackDot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/greyDot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/greyDot.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,7 +98,8 @@
       <option name="presentableId" value="Default" />
       <updated>1595939481646</updated>
       <workItem from="1595939485406" duration="45523000" />
-      <workItem from="1596019306145" duration="3471000" />
+      <workItem from="1596019306145" duration="4828000" />
+      <workItem from="1596631843995" duration="13797000" />
     </task>
     <task id="LOCAL-00001" summary="Creating nike store app">
       <created>1595942321060</created>
@@ -118,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595980461503</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Small fixes">
+      <created>1596022841633</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596022841633</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +161,7 @@
     <MESSAGE value="Made website based on project design" />
     <MESSAGE value="Added title, favicon + some positioning changes" />
     <MESSAGE value="Added animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added animations" />
+    <MESSAGE value="Small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fixes" />
   </component>
 </project>
