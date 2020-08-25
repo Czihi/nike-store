@@ -277,8 +277,8 @@
   z-index: 4;
   position: fixed;
   width: calc(20vw + 20vh);
-  height: calc(5vw+ 5vh);
-  font-size: calc(1.5vw + 1.5vh);
+  height: calc(4.5vw+ 4.5vh);
+  font-size: calc(2vw + 2vh);
   font-weight:600;
   margin: auto;
   left: 0;
@@ -292,6 +292,13 @@
 .alert__button{
   background-color: #333;
   border: 0;
+  color: grey;
+}
+
+@media(max-width: 900px){
+  .alert {
+    height: 50px;
+  }
 }
 
 @media (max-width: 600px){
