@@ -20,13 +20,11 @@ const Info = (props) => {
 
     function addToCart() {
         let alert = document.createElement("div");
-        let text = document.createTextNode("Added to cart!");
         alert.setAttribute("id", "alert" + id);
-        alert.appendChild(text);
+        alert.innerHTML="Added to cart!";
         alert.classList.add("alert");
         let button = document.createElement('BUTTON');
-        let buttonText = document.createTextNode("✖");
-        button.appendChild(buttonText);
+        button.innerHTML="✖";
         button.classList.add("alert__button");
         button.onclick= ()=> removeAlert(id-1);
         alert.appendChild(button);
