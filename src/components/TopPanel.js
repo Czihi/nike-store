@@ -3,6 +3,8 @@ import nikeLogo from "../images/nikeLogo.png";
 import cart from "../images/cart.png";
 
 const TopPanel= ()=>{
+
+
     return(<div className="top-panel">
         <img className="nikeLogo noSelect" draggable={false} src={nikeLogo} alt="logo"/>
             <div className="groupCart">

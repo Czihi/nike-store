@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f952a3e7-0f70-43b1-b696-22d3cbcb1e23" name="Default Changelist" comment="Major code changes, responsiveness, structure">
+    <list default="true" id="f952a3e7-0f70-43b1-b696-22d3cbcb1e23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/MobileSidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/mobileBackground.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/nikeShoes1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/nikeShoes1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/nikeLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/nikeLogo.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +95,11 @@
       <updated>1595939481646</updated>
       <workItem from="1595939485406" duration="45523000" />
       <workItem from="1596019306145" duration="4828000" />
-      <workItem from="1596631843995" duration="14630000" />
+      <workItem from="1596631843995" duration="15477000" />
+      <workItem from="1596809980508" duration="6422000" />
+      <workItem from="1597407381274" duration="117000" />
+      <workItem from="1598249673915" duration="15225000" />
+      <workItem from="1598338631299" duration="4852000" />
     </task>
     <task id="LOCAL-00001" summary="Creating nike store app">
       <created>1595942321060</created>
@@ -134,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596646395119</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Major code changes, responsiveness, structure">
+      <created>1596647046566</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596647046566</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

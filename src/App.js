@@ -10,7 +10,8 @@ import MiniPanel from "./components/MiniPanel";
 import MainImage from "./components/MainImage";
 import Info from "./components/Info";
 import TopPanel from "./components/TopPanel";
-
+import mbg from "./images/mobileBackground.png"
+import MobileSidebar from "./components/MobileSidebar";
 
 class App extends Component {
     state = {
@@ -20,7 +21,15 @@ class App extends Component {
         canGoRight: true,
         size: 1920
     };
+    changeMenu = () => {
 
+        if (document.getElementById("sidebarDropdown") !== null) {
+            document.getElementById("sidebarDropdown").style.width = "120px"
+
+        }
+
+
+    };
     mark = (index) => {
         const options = document.getElementsByClassName("sideNavOption");
         const dots = document.getElementsByClassName("dot");
@@ -125,11 +134,21 @@ class App extends Component {
 
                     </div>
                 </div>
+                <img src={mbg} alt="mobile-background" className="mobile-background"/>
                 <Route path="/Nike-store" exact render={
                     () => {
                         document.title = "Nike store";
-                        return (<div>
-                                <TopPanel/>
+                        return (<div className="main">
+                                <div id="sidebarIcon" className="dropdown__icon" onClick={this.changeMenu}>
+                                    ☰Categories
+                                </div>
+                                <div id="alertDiv">
+                                </div>
+                                <MobileSidebar
+                                />
+                                <TopPanel
+                                />
+                                <div id="category" className="category">Men's</div>
                                 <MainImage
                                 />
                                 <div className="group">
@@ -140,12 +159,12 @@ class App extends Component {
                                         mark={this.mark}
                                         dotColor={this.state.dotColor}
                                     />
-                                        <Info
-                                            goLeft={this.leftImage}
-                                            goRight={this.rightImage}
-                                            canGoLeft={this.state.canGoLeft}
-                                            canGoRight={this.state.canGoRight}
-                                        />
+                                    <Info
+                                        goLeft={this.leftImage}
+                                        goRight={this.rightImage}
+                                        canGoLeft={this.state.canGoLeft}
+                                        canGoRight={this.state.canGoRight}
+                                    />
 
                                 </div>
                             </div>
