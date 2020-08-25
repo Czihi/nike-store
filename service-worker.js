@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/nike-store/precache-manifest.41080bef755f3d6e68059a980e41a89f.js"
+  "/nike-store/precache-manifest.6ac4da62dd4743329b9337dddfa8b52c.js"
 );
 
 workbox.clientsClaim();
