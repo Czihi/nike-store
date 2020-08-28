@@ -336,13 +336,256 @@
     color: grey;
 }
 
+.shopping {
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: 700;
+    font-size: calc(1.2vw + 1.2vh);
+}
+
+.shopping__group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.productContainer {
+    flex: 2.6 1;
+    font-family: Bahnschrift, Arial, serif;
+    color: black;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.nike{
+    margin-top: 2%;
+    margin-left: 7%;
+}
+
+.product__line {
+    margin-left: 12%;
+    margin-right: 12%;
+    width: 76%;
+}
+
+.product__image {
+    flex: 1 1;
+    max-width: 15%;
+    max-height: 15%;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.product__name {
+    padding-left: 50px;
+    flex: 2 1;
+    font-weight: 700;
+    font-size: calc(0.8vw + 0.8vh);
+}
+
+.product__amount {
+    flex: 1 1;
+}
+.product__amount--input{
+    text-align: center;
+    max-width: 50px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+.product__price {
+    flex: 1 1;
+    margin: 10px;
+    font-weight: 700;
+    font-size: calc(0.8vw + 0.8vh);
+}
+
+.product__cancel {
+    flex: 1 1;
+    margin: 21px;
+}
+
+.checkout {
+    max-height: 570px;
+    flex: 1 1;
+    padding: calc(1.5vw + 1.5vh) calc(2vw + 2vh);
+    margin-right: 5%;
+    margin-top: -5%;
+    background-color: #444;
+    border-radius: 2%;
+    color: white;
+}
+
+.checkout__details {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.checkout__type {
+    margin-top: 5%;
+    font-weight: 700;
+    font-size: 11px;
+    color: grey;
+}
+
+.checkout__creditCards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.checkout__card{
+    flex: 1 1;
+    max-width: 50%;
+    height: auto;
+    filter: brightness(20%);
+    cursor: pointer;
+}
+
+.checkout__owner {
+    margin-top: 7%;
+    font-weight: 700;
+    font-size: 11px;
+    color: grey;
+}
+
+.checkout__owner--input {
+    font-weight: lighter;
+    font-size: 15px;
+    color: white;
+    background: #444;
+    border: none;
+    border-bottom: 1px solid #666;
+    width: 100%;
+    height: 30px;
+}
+
+.checkout__cardNumber {
+    margin-top: 7%;
+    font-weight: 700;
+    font-size: 11px;
+    color: grey;
+}
+
+.checkout__cardNumber--input {
+    font-weight: lighter;
+    font-size: 15px;
+    color: white;
+    background: #444;
+    border: none;
+    border-bottom: 1px solid #666;
+    width: 100%;
+    height: 30px;
+}
+
+.checkout__expiration {
+    font-weight: 700;
+    font-size: 11px;
+    color: grey;
+}
+
+.card__data {
+    margin-top: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.checkout__expiration--select {
+    flex: 2 1
+}
+
+.checkout__expirationMonth--select {
+    font-weight: lighter;
+    font-size: 15px;
+    color: white;
+    background: #444;
+    border: none;
+    border-bottom: 1px solid #666;
+    width: 40%;
+    height: 30px;
+}
+
+.checkout__expirationYear--select {
+    margin-left: 3%;
+    font-weight: lighter;
+    font-size: 15px;
+    color: white;
+    background: #444;
+    border: none;
+    border-bottom: 1px solid #666;
+    width: 40%;
+    height: 30px;
+}
+
+.checkout__cvv--group {
+    flex: 1 1;
+}
+
+.checkout__cvv {
+    font-weight: 700;
+    font-size: 11px;
+    color: grey;
+}
+
+.checkout__cvv--input {
+    font-weight: lighter;
+    font-size: 15px;
+    color: white;
+    background: #444;
+    border: none;
+    border-bottom: 1px solid #666;
+    width: 90%;
+    height: 30px;
+}
+
+.checkout__button {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10%;
+    width: 100%;
+    height: 50px;
+}
+.main{
+    background-color: #eee;
+}
+.continue {
+    flex: 3 1;
+    margin-top: 3%;
+    margin-bottom: 6%;
+    margin-left: 12%;
+    font-family: Bahnschrift, Arial, serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+.total__group{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.shopping__total{
+    flex: 1 1;
+    font-size: 16px;
+    color: grey;
+}
+.shopping__total--price{
+    font-size: 22px;
+    color:black;
+}
 @media (max-width: 900px) {
     .alert {
         width: 200px;
         height: 50px;
         font-size: 15px;
     }
-
+.checkout{
+    margin-right: 0;
+    margin-left: 0;
+}
 }
 
 @media (max-width: 600px) {
@@ -450,5 +693,11 @@
 
     .cart {
         font-size: 20px;
+    }
+    .shopping__group{
+        display: block;
+    }
+    .checkout{
+        margin: 0
     }
 }

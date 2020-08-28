@@ -12,6 +12,8 @@ import Info from "./components/Info";
 import TopPanel from "./components/TopPanel";
 import mbg from "./images/mobileBackground.png"
 import MobileSidebar from "./components/MobileSidebar";
+import MainCart from "./components/MainCart";
+import Background from "./components/Background";
 
 class App extends Component {
     state = {
@@ -19,7 +21,8 @@ class App extends Component {
         imageIndex: 1,
         canGoLeft: false,
         canGoRight: true,
-        size: 1920
+        size: 1920,
+        cart:  []
     };
     changeMenu = () => {
 
@@ -126,19 +129,12 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div className="background">
-                    <div className="white-div">
-
-                    </div>
-                    <div className="gray-div">
-
-                    </div>
-                </div>
                 <img src={mbg} alt="mobile-background" className="mobile-background"/>
                 <Route path="/Nike-store" exact render={
                     () => {
                         document.title = "Nike store";
-                        return (<div className="main">
+                        return (<div>
+                                <Background/>
                                 <div id="sidebarIcon" className="dropdown__icon" onClick={this.changeMenu}>
                                     ☰Categories
                                 </div>
@@ -160,6 +156,8 @@ class App extends Component {
                                         dotColor={this.state.dotColor}
                                     />
                                     <Info
+                                        setState={(s,c)=>this.setState(s, c)}
+                                        cart={this.state.cart}
                                         goLeft={this.leftImage}
                                         goRight={this.rightImage}
                                         canGoLeft={this.state.canGoLeft}
@@ -167,6 +165,18 @@ class App extends Component {
                                     />
 
                                 </div>
+                            </div>
+                        )
+                    }
+                }/>
+                <Route path="/Nike-store/cart" exact render={
+                    ()=>{
+                        document.title="Nike store - cart";
+                        return(
+                            <div className="main">
+                                <MainCart
+                                cart={this.state.cart}
+                                />
                             </div>
                         )
                     }

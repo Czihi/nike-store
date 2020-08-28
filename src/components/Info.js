@@ -7,7 +7,7 @@ const Info = (props) => {
     const arrowType = {true: arrow, false: arrowGray};
     let top = 25;
     let id = 0;
-
+    let productId=1;
     function removeAlert(removeId){
         let alertToRemove= document.getElementById("alert" +removeId);
         if(alertToRemove!==null){
@@ -19,6 +19,9 @@ const Info = (props) => {
     }
 
     function addToCart() {
+        let newCart=[...props.cart];
+        newCart.push({id: productId, name: "NikeForce", price:"$80", source:"nikeShoes1", amount:1});
+        props.setState({cart: newCart});
         let alert = document.createElement("div");
         alert.setAttribute("id", "alert" + id);
         alert.innerHTML="Added to cart!";
@@ -37,6 +40,7 @@ const Info = (props) => {
         document.getElementById("alert"+id).style.opacity="0";
         setTimeout(removeAlert, 5000, id);
         id++;
+        productId++;
     }
 
     return (
