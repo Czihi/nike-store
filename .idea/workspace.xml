@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f952a3e7-0f70-43b1-b696-22d3cbcb1e23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +97,7 @@
       <workItem from="1598425371720" duration="18878000" />
       <workItem from="1598513954573" duration="3251000" />
       <workItem from="1598628804623" duration="1063000" />
-      <workItem from="1598794424938" duration="8782000" />
+      <workItem from="1598794424938" duration="8904000" />
     </task>
     <task id="LOCAL-00001" summary="Creating nike store app">
       <created>1595942321060</created>
@@ -189,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598803066013</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Finished dynamic shopping, added thank-you alert">
+      <created>1598803232744</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598803232744</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

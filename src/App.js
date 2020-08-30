@@ -150,7 +150,7 @@ class App extends Component {
                         )
                     }
                 }/>
-                <Route path="/nike-store/cart" exact render={
+                <Route path="/Nike-store/cart" exact render={
                     () => {
                         document.title = "Nike store - cart";
                         return (
