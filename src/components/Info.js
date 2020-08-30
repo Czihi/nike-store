@@ -4,10 +4,11 @@ import arrowGray from "../images/arrowGray.png"
 import Links from "./Links";
 
 const Info = (props) => {
+    let productId=props.imageIndex;
+    let products=props.products
     const arrowType = {true: arrow, false: arrowGray};
     let top = 25;
     let id = 0;
-    let productId=1;
     function removeAlert(removeId){
         let alertToRemove= document.getElementById("alert" +removeId);
         if(alertToRemove!==null){
@@ -19,8 +20,24 @@ const Info = (props) => {
     }
 
     function addToCart() {
+        let productNotFound=true;
         let newCart=[...props.cart];
-        newCart.push({id: productId, name: "NikeForce", price:"$80", source:"nikeShoes1", amount:1});
+        for (const product in newCart){
+            if(newCart[product].id===productId){
+                newCart[product].amount+=1;
+                productNotFound=false;
+                break;
+            }
+        }
+        if(productNotFound) {
+            newCart.push({
+                id: productId,
+                name: products[productId].name,
+                price: products[productId].price,
+                source: "nikeShoes" + productId,
+                amount: 1
+            });
+        }
         props.setState({cart: newCart});
         let alert = document.createElement("div");
         alert.setAttribute("id", "alert" + id);
@@ -40,25 +57,22 @@ const Info = (props) => {
         document.getElementById("alert"+id).style.opacity="0";
         setTimeout(removeAlert, 5000, id);
         id++;
-        productId++;
     }
+
 
     return (
         <div className="info">
-            <h3 id="grad1" className="shoeName gradient1">Nike Airforce</h3>
-            <h3 id="grad2" className="shoeName gradient2">Nike Airforce</h3>
-            <h3 id="grad3" className="shoeName gradient3">Nike Airforce</h3>
+            <h3 id="shoeGradient" className="shoeName">{products[productId].name}</h3>
             <div className="group-info-links">
                 <div className="left">
-                    <h4 className="price">$80</h4>
-                    <h6 className="desc">From high-top to low-top. Live the legend of the Air Force 1, modernized for
-                        ultimate street style.</h6>
+                    <h4 className="price">${products[productId].price}</h4>
+                    <h6 className="desc">{products[productId].description}</h6>
                     <button id="addToCart" onClick={addToCart} className="addToCart">Add to cart</button>
                     <div className="group-buttons">
                         <img id="left" className="arrowLeft noSelect" draggable={false} src={arrowType[props.canGoLeft]}
-                             onClick={props.goLeft} alt="left"/>
+                             onClick={()=>{props.changeIndex(-1)}} alt="left"/>
                         <img id="right" className="arrowRight noSelect" draggable={false}
-                             src={arrowType[props.canGoRight]} onClick={props.goRight} alt="right"/>
+                             src={arrowType[props.canGoRight]} onClick={()=>{props.changeIndex(1)}} alt="right"/>
                     </div>
                 </div>
                 <div className="right">

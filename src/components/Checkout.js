@@ -2,26 +2,45 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import visa from "../images/visa.png"
 import mastercard from "../images/mastercard.png"
+import {Link} from "react-router-dom";
 
 const Checkout = (props) => {
-    function chooseCard(card) {
-        const cardList=["mastercard", "visa"];
-        for (const name in cardList){
-            document.getElementById(cardList[name]).style.filter="brightness(20%)"
-        }
-        document.getElementById(card).style.filter="brightness(100%)"
+    function thankYou() {
+        document.getElementById("thankYou").style.display = "block"
     }
+
+    function chooseCard(card) {
+        const cardList = ["mastercard", "visa"];
+        for (const name in cardList) {
+            document.getElementById(cardList[name]).style.filter = "brightness(20%)"
+        }
+        document.getElementById(card).style.filter = "brightness(100%)"
+    }
+    function clearCart() {
+        props.setState({cart: []})
+    }
+
     return (<div className="checkout">
+        <div className="checkout__thank" id="thankYou">
+            <div>Thank you for your order!</div>
+            <Link to="/Nike-store">
+                <Button onClick={() => clearCart()} className="checkout__back">Back to the main page</Button>
+            </Link>
+        </div>
         <div className="checkout__details">Card Details</div>
         <div className="checkout__type">Card Type</div>
         <div className="checkout__creditCards">
-            <img id="mastercard" onClick={()=>{chooseCard("mastercard")}} className="checkout__card" src={mastercard} alt="card"/>
-            <img id="visa" onClick={()=>{chooseCard("visa")}} className="checkout__card" src={visa} alt="card"/>
+            <img id="mastercard" onClick={() => {
+                chooseCard("mastercard")
+            }} className="checkout__card" src={mastercard} alt="card"/>
+            <img id="visa" onClick={() => {
+                chooseCard("visa")
+            }} className="checkout__card" src={visa} alt="card"/>
         </div>
         <div className="checkout__owner">Name on Card</div>
         <input className="checkout__owner--input"/>
         <div className="checkout__cardNumber">Card Number</div>
-        <input className="checkout__cardNumber--input"   minLength="16" maxLength="16"
+        <input className="checkout__cardNumber--input" minLength="16" maxLength="16"
                placeholder="xxxx xxxx xxxx xxxx"/>
         <div className="card__data">
             <div className="checkout__expiration--select">
@@ -56,10 +75,10 @@ const Checkout = (props) => {
             </div>
             <div className="checkout__cvv--group">
                 <div className="checkout__cvv">CVV</div>
-                <input className="checkout__cvv--input"  minLength="3" maxLength="3"/>
+                <input className="checkout__cvv--input" minLength="3" maxLength="3"/>
             </div>
         </div>
-        <Button className="checkout__button">Check out</Button>
+        <Button onClick={() => thankYou()} className="checkout__button">Check out</Button>
     </div>)
 };
 export default Checkout

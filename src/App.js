@@ -15,24 +15,49 @@ import MobileSidebar from "./components/MobileSidebar";
 import MainCart from "./components/MainCart";
 import Background from "./components/Background";
 
+
 class App extends Component {
     state = {
         dotColor: ["blackDot", "greyDot", "greyDot", "greyDot", "greyDot"],
         imageIndex: 1,
+        gradients: {
+            1: "linear-gradient(to right, #000, #bf0d0d 25%, orange 85%)",
+            2: "linear-gradient(to right, #00a, #00f 25%, grey 85%)",
+            3: "linear-gradient(to right, #000, #333 25%, #777 85%)"
+        },
+        products: {
+            1: {
+                name: "Nike Airforce",
+                price: 80,
+                description: "From high-top to low-top. Live the legend of the Air Force 1, modernized for ultimate street style.",
+                source: "nikeShoes1"
+            },
+            2: {
+                name: "Nike Airforce",
+                price: 90,
+                description: "From high-top to low-top. Live the legend of the Air Force 1, modernized for ultimate street style.",
+                source: "nikeShoes2"
+            },
+            3: {
+                name: "Nike Airforce",
+                price: 100,
+                description: "From high-top to low-top. Live the legend of the Air Force 1, modernized for ultimate street style.",
+                source: "nikeShoes3"
+            }
+        },
         canGoLeft: false,
         canGoRight: true,
         size: 1920,
-        cart:  []
+        cart: [],
+        n: 3
     };
-    changeMenu = () => {
 
+    changeMenu = () => {
         if (document.getElementById("sidebarDropdown") !== null) {
             document.getElementById("sidebarDropdown").style.width = "120px"
-
         }
-
-
     };
+
     mark = (index) => {
         const options = document.getElementsByClassName("sideNavOption");
         const dots = document.getElementsByClassName("dot");
@@ -62,69 +87,23 @@ class App extends Component {
         this.setState({dotColor: elements});
     };
 
-    leftImage = () => {
-        if (this.state.imageIndex === 2) {
-            document.getElementById("left").style.cursor = "auto";
-            document.getElementById("right").style.cursor = "pointer";
-            this.setState({canGoRight: true, canGoLeft: false});
-
-        } else {
-            if (this.state.imageIndex === 3) {
+    changeIndex = (number) => {
+        if (this.state.imageIndex + number <= this.state.n && this.state.imageIndex + number >= 1) {
+            if (this.state.imageIndex + number === 1) {
+                document.getElementById("left").style.cursor = "auto";
                 document.getElementById("right").style.cursor = "pointer";
+                this.setState({canGoRight: true, canGoLeft: false});
+            }
+            if (this.state.imageIndex + number === this.state.n) {
                 document.getElementById("left").style.cursor = "pointer";
-
-                this.setState({canGoRight: true, canGoLeft: true})
+                document.getElementById("right").style.cursor = "auto";
+                this.setState({canGoLeft: true, canGoRight: false});
             }
-        }
-        if (this.state.imageIndex > 1) {
-            for (let i = 1; i < 4; i++) {
-                if (i === this.state.imageIndex - 1) {
-                    document.getElementById("image" + i).style.opacity = 1;
-                    document.getElementById("grad" + i).style.opacity = 1;
-                    document.getElementById("grad" + i).style.display = "block";
-
-
-                } else {
-                    document.getElementById("image" + i).style.opacity = 0;
-                    document.getElementById("grad" + i).style.opacity = 0;
-                    document.getElementById("grad" + i).style.display = "none";
-
-                }
-            }
-            this.setState({imageIndex: this.state.imageIndex - 1})
+            document.getElementById("shoeGradient").style.backgroundImage = this.state.gradients[this.state.imageIndex + number]
+            this.setState({imageIndex: this.state.imageIndex + number})
         }
     };
-    rightImage = () => {
-        if (this.state.imageIndex === 2) {
-            document.getElementById("right").style.cursor = "auto";
-            document.getElementById("left").style.cursor = "pointer";
 
-            this.setState({canGoLeft: true, canGoRight: false})
-        } else {
-            if (this.state.imageIndex === 1) {
-                document.getElementById("right").style.cursor = "pointer";
-                document.getElementById("left").style.cursor = "pointer";
-                this.setState({canGoRight: true, canGoLeft: true});
-
-            }
-        }
-        if (this.state.imageIndex < 3) {
-            for (let i = 1; i < 4; i++) {
-                if (i === this.state.imageIndex + 1) {
-                    document.getElementById("image" + i).style.opacity = 1;
-                    document.getElementById("grad" + i).style.opacity = 1;
-                    document.getElementById("grad" + i).style.display = "block";
-
-                } else {
-                    document.getElementById("image" + i).style.opacity = 0;
-                    document.getElementById("grad" + i).style.opacity = 0;
-                    document.getElementById("grad" + i).style.display = "none";
-
-                }
-            }
-            this.setState({imageIndex: this.state.imageIndex + 1})
-        }
-    };
 
     render() {
         return (
@@ -146,6 +125,7 @@ class App extends Component {
                                 />
                                 <div id="category" className="category">Men's</div>
                                 <MainImage
+                                    imageIndex={this.state.imageIndex}
                                 />
                                 <div className="group">
                                     <LeftPanel
@@ -156,12 +136,13 @@ class App extends Component {
                                         dotColor={this.state.dotColor}
                                     />
                                     <Info
-                                        setState={(s,c)=>this.setState(s, c)}
+                                        setState={(s, c) => this.setState(s, c)}
                                         cart={this.state.cart}
-                                        goLeft={this.leftImage}
-                                        goRight={this.rightImage}
+                                        changeIndex={this.changeIndex}
                                         canGoLeft={this.state.canGoLeft}
                                         canGoRight={this.state.canGoRight}
+                                        imageIndex={this.state.imageIndex}
+                                        products={this.state.products}
                                     />
 
                                 </div>
@@ -170,12 +151,13 @@ class App extends Component {
                     }
                 }/>
                 <Route path="/Nike-store/cart" exact render={
-                    ()=>{
-                        document.title="Nike store - cart";
-                        return(
+                    () => {
+                        document.title = "Nike store - cart";
+                        return (
                             <div className="main">
                                 <MainCart
-                                cart={this.state.cart}
+                                    cart={this.state.cart}
+                                    setState={(s, c) => this.setState(s, c)}
                                 />
                             </div>
                         )
