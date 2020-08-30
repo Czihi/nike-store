@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Nike-store/static/media/nikeShoes3.28d1e326.png"
   },
   {
-    "revision": "8417672640169bb82ade",
+    "revision": "71dbdb34f7c499e2323f",
     "url": "/Nike-store/static/css/main.9aa692ad.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/Nike-store/static/media/nikeShoes2.76433905.png"
   },
   {
-    "revision": "8417672640169bb82ade",
-    "url": "/Nike-store/static/js/main.a9c0cf72.chunk.js"
+    "revision": "71dbdb34f7c499e2323f",
+    "url": "/Nike-store/static/js/main.2e48d3d4.chunk.js"
   },
   {
     "revision": "6a9b19e18826ede28e7b6fd9ca086934",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/Nike-store/static/css/2.02787c02.chunk.css"
   },
   {
-    "revision": "899c776b215440f9ce1df18abb429538",
+    "revision": "1e20bfead09d72f54ff4d4039ad64e8b",
     "url": "/Nike-store/index.html"
   }
 ];
