@@ -6,9 +6,7 @@ import {Link} from "react-router-dom";
 
 const MainCart = (props) => {
     let products = [];
-    let subtotal = 0;
     for (const product in props.cart) {
-        subtotal += props.cart[product].price * props.cart[product].amount;
         products.push(<CartProduct
             key={product}
             id={props.cart[product].id}
@@ -16,7 +14,9 @@ const MainCart = (props) => {
             name={props.cart[product].name}
             amount={props.cart[product].amount}
             price={props.cart[product].price}
-        />)
+            setState={props.setState}
+            cart={props.cart}
+        />);
     }
 
     return (<div className="shopping__main">
@@ -29,7 +29,7 @@ const MainCart = (props) => {
                         <div>← Continue Shopping</div>
                     </Link>
                     <div className="shopping__total">Subtotal:
-                        <div className="shopping__total--price">${subtotal}</div>
+                        <div className="shopping__total--price">${props.subtotal}</div>
                     </div>
                 </div>
             </div>

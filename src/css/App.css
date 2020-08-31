@@ -286,7 +286,7 @@
     background-color: #333;
     color: white;
     border-radius: 5px;
-    transition: opacity 5s ease-in;
+    transition: opacity 4s ease-in;
 }
 .checkout__thank {
     padding-top: 30vh;

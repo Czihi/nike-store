@@ -49,6 +49,7 @@ class App extends Component {
         canGoRight: true,
         size: 1920,
         cart: [],
+        subtotal: 0,
         n: 3
     };
 
@@ -93,12 +94,13 @@ class App extends Component {
                 document.getElementById("left").style.cursor = "auto";
                 document.getElementById("right").style.cursor = "pointer";
                 this.setState({canGoRight: true, canGoLeft: false});
-            }
+            }else
             if (this.state.imageIndex + number === this.state.n) {
                 document.getElementById("left").style.cursor = "pointer";
                 document.getElementById("right").style.cursor = "auto";
                 this.setState({canGoLeft: true, canGoRight: false});
-            }
+            }else
+                this.setState({canGoLeft: true, canGoRight: true});
             document.getElementById("shoeGradient").style.backgroundImage = this.state.gradients[this.state.imageIndex + number]
             this.setState({imageIndex: this.state.imageIndex + number})
         }
@@ -143,6 +145,7 @@ class App extends Component {
                                         canGoRight={this.state.canGoRight}
                                         imageIndex={this.state.imageIndex}
                                         products={this.state.products}
+                                        subtotal={this.state.subtotal}
                                     />
 
                                 </div>
@@ -157,6 +160,7 @@ class App extends Component {
                             <div className="main">
                                 <MainCart
                                     cart={this.state.cart}
+                                    subtotal={this.state.subtotal}
                                     setState={(s, c) => this.setState(s, c)}
                                 />
                             </div>
